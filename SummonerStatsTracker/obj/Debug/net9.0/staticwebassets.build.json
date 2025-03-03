@@ -1,0 +1,12 @@
+{
+  "Version": 1,
+  "Hash": "oobWZxzsJ2oyryLG08rJvjxyKFonY0KG7Yy3Y97KMsw=",
+  "Source": "SummonerStatsTracker",
+  "BasePath": "_content/SummonerStatsTracker",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": [],
+  "Endpoints": []
+}
