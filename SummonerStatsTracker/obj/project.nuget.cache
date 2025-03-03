@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "OrY98kNLVao=",
+  "success": true,
+  "projectFilePath": "C:\\Koding\\SummonerStatsTracker\\SummonerStatsTracker\\SummonerStatsTracker.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\fadin\\.nuget\\packages\\microsoft.aspnetcore.openapi\\9.0.0\\microsoft.aspnetcore.openapi.9.0.0.nupkg.sha512",
+    "C:\\Users\\fadin\\.nuget\\packages\\microsoft.openapi\\1.6.17\\microsoft.openapi.1.6.17.nupkg.sha512"
+  ],
+  "logs": []
+}
