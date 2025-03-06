@@ -4,3 +4,8 @@ using System.Threading.Tasks;
 using Newtonsoft.Json;
 using RestSharp;
 
+namespace SummonerStatsTracker.Services
+{
+    public class SummonerService
+    
+}
