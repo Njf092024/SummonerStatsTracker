@@ -12,5 +12,10 @@ namespace SummonerStatsTracker.Services
         private readonly string _baseUrl = "https://nal.api.riotgames.com/lol/summoner/v4/summoners/by-name/";
 
         public async Task<dynamic> GetSummonerByName(string summonerName)
+        {
+            var client = new RestClient(_baseUrl + summonerName);
+            var request = new RestRequest();
+            request.AddHeader("X-Riot-Token" _apiKey);
+        }
     }
 }
