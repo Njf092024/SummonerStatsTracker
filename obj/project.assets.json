@@ -119,11 +119,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Koding\\SummonerStatsTracker\\SummonerStatsTracker\\SummonerStatsTracker.csproj",
+      "projectUniqueName": "C:\\Koding\\SummonerStatsTracker\\SummonerStatsTracker.csproj",
       "projectName": "SummonerStatsTracker",
-      "projectPath": "C:\\Koding\\SummonerStatsTracker\\SummonerStatsTracker\\SummonerStatsTracker.csproj",
+      "projectPath": "C:\\Koding\\SummonerStatsTracker\\SummonerStatsTracker.csproj",
       "packagesPath": "C:\\Users\\fadin\\.nuget\\packages\\",
-      "outputPath": "C:\\Koding\\SummonerStatsTracker\\SummonerStatsTracker\\obj\\",
+      "outputPath": "C:\\Koding\\SummonerStatsTracker\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\fadin\\AppData\\Roaming\\NuGet\\NuGet.Config"
