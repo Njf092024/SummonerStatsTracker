@@ -8,14 +8,14 @@ namespace SummonerStatsTracker.Services
 {
     public class SummonerService
     {
-        private readonly string _apiKey = "YOUR_RIOT_API_KEY";
+        private readonly string _apiKey = "RGAPI-ac66e42e-f5dc-436f-a584-c348af254160";
         private readonly string _baseUrl = "https://nal.api.riotgames.com/lol/summoner/v4/summoners/by-name/";
 
         public async Task<dynamic> GetSummonerByName(string summonerName)
         {
             var client = new RestClient(_baseUrl + summonerName);
             var request = new RestRequest();
-            request.AddHeader("X-Riot-Token" _apiKey);
+            request.AddHeader("X-Riot-Token", _apiKey);
 
             var response = await client.GetAsync(request);
             if (!respones.IsSuccessful)
