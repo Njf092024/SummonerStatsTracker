@@ -1,0 +1,13 @@
+# Ignore appsettings.json to prevent exposing API keys
+appsettings.json
+appsettings.Development.json
+
+# Ignore build and cache files
+bin/
+obj/
+
+# Ignore user-specific files
+*.user
+.vscode/
+*.suo
+*.log
