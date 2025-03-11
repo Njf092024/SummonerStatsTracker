@@ -16,6 +16,14 @@ namespace SummonerStatsTracker.Services
             var client = new RestClient(_baseUrl + summonerName);
             var request = new RestRequest();
             request.AddHeader("X-Riot-Token" _apiKey);
+
+            var response = await client.GetAsync(request);
+            if (!respones.IsSuccessful)
+            {
+                throw new Exception($"Error: {response.StatusCode} - {response.Content}");
+            }
+
+            return JsonConvert.DeserializeObject(response.Content);
         }
     }
 }
