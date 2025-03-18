@@ -1,11 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "G20wiwcouHA=",
+  "dgSpecHash": "3PYKNJbSIZU=",
   "success": true,
   "projectFilePath": "C:\\Koding\\SummonerStatsTracker\\SummonerStatsTracker.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\fadin\\.nuget\\packages\\microsoft.aspnetcore.openapi\\9.0.0\\microsoft.aspnetcore.openapi.9.0.0.nupkg.sha512",
     "C:\\Users\\fadin\\.nuget\\packages\\microsoft.openapi\\1.6.17\\microsoft.openapi.1.6.17.nupkg.sha512",
+    "C:\\Users\\fadin\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512",
     "C:\\Users\\fadin\\.nuget\\packages\\restsharp\\112.1.0\\restsharp.112.1.0.nupkg.sha512"
   ],
   "logs": []
