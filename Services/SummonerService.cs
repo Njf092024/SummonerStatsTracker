@@ -23,7 +23,7 @@ namespace SummonerStatsTracker.Services
             request.AddHeader("X-Riot-Token", _apiKey);
 
             var response = await client.GetAsync(request);
-            if (!respones.IsSuccessful)
+            if (!response.IsSuccessful)
             {
                 throw new Exception($"Error: {response.StatusCode} - {response.Content}");
             }

@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("SummonerStatsTracker")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+75c30cd2df97a28b96e275c629e68fa707e41b59")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ea90da1ee9405395bab73bc662e72e8e9ce795a9")]
 [assembly: System.Reflection.AssemblyProductAttribute("SummonerStatsTracker")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SummonerStatsTracker")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
