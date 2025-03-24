@@ -6,7 +6,7 @@ var builder = Host.CreateDefaultBuilder(args)
 .ConfigureServices((context, services)=>
 {
     services.AddSingleton<SummonerService>();
-    services.AddSingleton<IConfiguration>(context.configuration);
+    services.AddSingleton<IConfiguration>(context.Configuration);
 })
 .Build();
 
