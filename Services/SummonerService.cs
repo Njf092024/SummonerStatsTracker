@@ -39,6 +39,12 @@ namespace SummonerStatsTracker.Services
                 throw new Exception("No data returned from the API");
             }
 
+            var result = JsonConvert.DeserializeObject(response.Content);
+            if (result == null)
+            {
+                throw new Exception("Failed to deserialize the response");
+            }
+
             return JsonConvert.DeserializeObject(response.Content);
         }
     }
