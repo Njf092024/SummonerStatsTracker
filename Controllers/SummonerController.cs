@@ -10,9 +10,9 @@ namespace SummonerStatsTracker.Controllers
     {
         private readonly SummonerService _summonerService;
 
-        public SummonerController()
+        public SummonerController(IConfiguration configuration)
         {
-            _summonerService = new SummonerService();
+            _summonerService = new SummonerService(configuration);
         }
 
         [HttpGet("{summonerName}")]
