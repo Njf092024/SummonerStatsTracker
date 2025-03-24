@@ -13,7 +13,7 @@ namespace SummonerStatsTracker.Services
 
         public SummonerService(IConfiguration configuration)
         {
-            _apiKey = configuration["RiotGames:ApiKey"];
+            _apiKey? = configuration["RiotGames:ApiKey"];
         }
 
         public async Task<dynamic> GetSummonerByName(string summonerName)

@@ -3,7 +3,7 @@ using Microsoft.Extensions.Hosting;
 using SummonerStatsTracker.Services;
 
 var builder = Host.CreateDefaultBuilder(args)
-.ConfigurServices((context, services)=>
+.ConfigureServices((context, services)=>
 {
     services.AddSingleton<SummonerService>();
     services.AddSingleton<IConfiguration>(context.configuration);
