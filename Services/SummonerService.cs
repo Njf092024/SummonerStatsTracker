@@ -3,6 +3,7 @@ using System.Net.Http;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
 using RestSharp;
+using Microsoft.Extensions.Configuration;
 
 namespace SummonerStatsTracker.Services
 {
