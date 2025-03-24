@@ -19,6 +19,11 @@ namespace SummonerStatsTracker.Services
 
         public async Task<dynamic> GetSummonerByName(string summonerName)
         {
+            if (string.IsNullOrEmpty(_apiKey))
+            {
+                throw new Exception("API Key is not configured.");
+            }
+        {
             var client = new RestClient(_baseUrl + summonerName);
             var request = new RestRequest();
             request.AddHeader("X-Riot-Token", _apiKey);
@@ -29,7 +34,13 @@ namespace SummonerStatsTracker.Services
                 throw new Exception($"Error: {response.StatusCode} - {response.Content}");
             }
 
+            if (string.IsNullOrEmpty(response.Content))
+            {
+                throw new Exception("No data returned from the API");
+            }
+
             return JsonConvert.DeserializeObject(response.Content);
         }
     }
+}
 }
