@@ -14,5 +14,11 @@ namespace SummonerStatsTracker.Controllers
         {
             _summonerService = new SummonerService();
         }
+
+        [HttpGet("{summonerName}")]
+        public async Task<IActionResult> GetSummoner(string summonerName)
+        {
+            
+        }
     }
 }
