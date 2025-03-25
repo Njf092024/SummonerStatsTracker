@@ -11,3 +11,5 @@ builder.Services.AddSwaggerGen(c =>
 {
     c.SwwaggerDoc("v1", new OpenApiInfo { Title = " Summoner API", Version = "v1" });
 });
+
+var app = builder.Build();
