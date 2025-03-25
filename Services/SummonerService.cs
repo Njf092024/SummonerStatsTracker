@@ -23,7 +23,7 @@ namespace SummonerStatsTracker.Services
             {
                 throw new Exception("API Key is not configured.");
             }
-        {
+        
             var client = new RestClient(_baseUrl + summonerName);
             var request = new RestRequest();
             request.AddHeader("X-Riot-Token", _apiKey);
@@ -45,8 +45,7 @@ namespace SummonerStatsTracker.Services
                 throw new Exception("Failed to deserialize the response");
             }
 
-            return JsonConvert.DeserializeObject(response.Content);
+            return result;
         }
     }
-}
 }
