@@ -69,3 +69,6 @@ C:\Koding\SummonerStatsTracker\obj\Debug\net9.0\refint\SummonerStatsTracker.dll
 C:\Koding\SummonerStatsTracker\obj\Debug\net9.0\SummonerStatsTracker.pdb
 C:\Koding\SummonerStatsTracker\obj\Debug\net9.0\SummonerStatsTracker.genruntimeconfig.cache
 C:\Koding\SummonerStatsTracker\obj\Debug\net9.0\ref\SummonerStatsTracker.dll
+C:\Koding\SummonerStatsTracker\bin\Debug\net9.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Koding\SummonerStatsTracker\bin\Debug\net9.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Koding\SummonerStatsTracker\bin\Debug\net9.0\Swashbuckle.AspNetCore.SwaggerUI.dll

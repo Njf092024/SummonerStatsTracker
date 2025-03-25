@@ -25,7 +25,7 @@ namespace SummonerStatsTracker.Controllers
             }
             catch (System.Exception ex)
             {
-                return BadRequest(new { message = ex.Message });
+                return BadRequest(new { message = "error occurred while retrieving summoner", error = ex.Message });
             }
         }
     }
