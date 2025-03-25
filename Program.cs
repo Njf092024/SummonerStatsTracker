@@ -23,3 +23,9 @@ if (app.Enviroment.IsDevelopment())
         c.RoutePrefix = string.Empty;
     });
 }
+
+app.UseHttpsRedirection();
+app.UseAuthorization();
+app.UseMapControllers();
+
+app.Run();
