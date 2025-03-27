@@ -26,6 +26,7 @@ namespace SummonerStatsTracker.Services
         
             var client = new RestClient(_baseUrl + summonerName);
             var request = new RestRequest();
+            
             request.AddHeader("X-Riot-Token", _apiKey);
 
             var response = await client.GetAsync(request);
