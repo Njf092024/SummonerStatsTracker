@@ -16,7 +16,8 @@ namespace SummonerStatsTracker.Services
 
         public SummonerService(IConfiguration configuration)
         {
-            _apiKey = configuration["RiotGames:ApiKey"];
+            _apiKey = configuration["RiotGames:ApiKey"] ?? throw new Exception("API Key is not configured");
+            _client = new RestClient();
 
             if (string.IsNullOrEmpty(_apiKey))
             {
