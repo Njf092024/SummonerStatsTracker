@@ -44,24 +44,21 @@ namespace SummonerStatsTracker.Services
 
             var response = await client.GetAsync(request);
 
-            Console.WriteLine("Response Status Code: " + response.StatusCode);
-            Console.WriteLine("Response Content: " + response.Content);
-            
-            if (!response.IsSuccessful)
-            {
-                throw new Exception($"Error: {response.StatusCode} - {response.Content}");
-            }
+            if (response.StatusCode == System.Net.HttpStatusCode.Forbidden)
+            throw new HttpRequestException("API Key is invalid or expired. Regenerate a new one at Riot Developer Portal.");
+
+            if (response.StatusCode == System.Net.HttpStatusCode.TooManyRequests)
+            throw new HttpRequestException("Rate limit exceeded! try again and stop spamming pls.");
+
+            if (response.IsSuccessful)
+            throw new HttpRequestException($"API error: {response.StatusCode} - {response.Content}");
 
             if (string.IsNullOrEmpty(response.Content))
-            {
-                throw new Exception("No data returned from the API");
-            }
+            throw new Exception($"No data returned from the API.");
 
             var result = JsonConvert.DeserializeObject(response.Content);
             if (result == null)
-            {
-                throw new Exception("Failed to deserialize the response");
-            }
+            throw new Exception("Failed to parse API response.");
 
             return result;
         }
