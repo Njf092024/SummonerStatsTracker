@@ -15,6 +15,16 @@ namespace SummonerStatsTracker.Services
         public SummonerService(IConfiguration configuration)
         {
             _apiKey = configuration["RiotGames:ApiKey"];
+
+            if (string.IsNullOrEmpty(_apiKey))
+            {
+                Console.WriteLine("API Key is missing or not loaded!");
+                throw new Exception("API Key is not configured.");
+            }
+            else
+            {
+                Console.WriteLine($"Using API Key: {_apiKey}");
+            }
         }
 
         public async Task<dynamic> GetSummonerByName(string summonerName)
