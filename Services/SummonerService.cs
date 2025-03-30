@@ -10,7 +10,9 @@ namespace SummonerStatsTracker.Services
     public class SummonerService
     {
         private readonly string? _apiKey;
-        private readonly string _baseUrl = "https://na1.api.riotgames.com/lol/summoner/v4/summoners/by-name/";
+        private readonly RestClient _client;
+
+        private const string _baseUrl = "https://na1.api.riotgames.com/lol/summoner/v4/summoners/by-name/";
 
         public SummonerService(IConfiguration configuration)
         {
