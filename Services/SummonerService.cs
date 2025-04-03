@@ -12,7 +12,7 @@ namespace SummonerStatsTracker.Services
         private readonly string? _apiKey;
         private readonly RestClient _client;
 
-        private const string _baseUrl = "https://na1.api.riotgames.com/lol/summoner/v4/summoners/by-name/";
+        private const string _baseUrl = "https://na1.api.riotgames.com/lol/summoner/v4/summoners/";
 
         public SummonerService(IConfiguration configuration)
         {
@@ -37,12 +37,11 @@ namespace SummonerStatsTracker.Services
                 throw new Exception("API Key is not configured.");
             }
         
-            var client = new RestClient(_baseUrl + summonerName);
-            var request = new RestRequest();
+            var request = new RestRequest(_baseUrl + summonerName);
             
             request.AddHeader("X-Riot-Token", _apiKey);
 
-            var response = await client.GetAsync(request);
+            var response = await _client.GetAsync(request);
 
             if (response.StatusCode == System.Net.HttpStatusCode.Forbidden)
             throw new HttpRequestException("API Key is invalid or expired. Regenerate a new one at Riot Developer Portal.");
@@ -50,7 +49,7 @@ namespace SummonerStatsTracker.Services
             if (response.StatusCode == System.Net.HttpStatusCode.TooManyRequests)
             throw new HttpRequestException("Rate limit exceeded! try again and stop spamming pls.");
 
-            if (response.IsSuccessful)
+            if (!response.IsSuccessful)
             throw new HttpRequestException($"API error: {response.StatusCode} - {response.Content}");
 
             if (string.IsNullOrEmpty(response.Content))
